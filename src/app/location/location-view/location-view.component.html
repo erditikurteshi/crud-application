@@ -1,0 +1,41 @@
+<div class="header-content" fxLayout="column" fxLayoutAlign="center">
+    <h2>Location Details</h2>
+</div>
+<mat-divider></mat-divider>
+<div class="details-content">
+    <div fxLayout="column" fxFlex="15">
+        <h3>Name:</h3>
+        <h3>City:</h3>
+        <h3>Address:</h3>
+        <h3>Longitude:</h3>
+        <h3>Latitude:</h3>
+    </div>
+
+    <div fxLayout="column" fxFlex="25" *ngIf="location">
+        <h3>{{location.name}}</h3>
+        <h3>{{location.city}}</h3>
+        <h3>{{location.address}}</h3>
+        <h3>{{location.longitude}}</h3>
+        <h3>{{location.latitude}}</h3>
+    </div>
+
+    <mat-divider vertical="true"></mat-divider>
+
+    <div fxLayout="column" fxFlex="50">
+        <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+    </div>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="start" class="buttons">
+
+    <button mat-raised-button color="private" class="cancel-button" aria-label="SAVE" routerLink="/location">
+        CANCEL
+    </button>
+
+    <button mat-raised-button color="primary" class="save-button" aria-label="SAVE"
+        [routerLink]="['/location/', locationId, 'edit']">
+        UPDATE
+    </button>
+</div>

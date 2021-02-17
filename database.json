@@ -1,0 +1,90 @@
+{
+  "allCities": [
+    {
+      "id": "1",
+      "cityName": "Berlin"
+    },
+    {
+      "id": "2",
+      "cityName": "Amsterdam"
+    },
+    {
+      "id": "3",
+      "cityName": "Ljubljana"
+    },
+    {
+      "id": "4",
+      "cityName": "Belgrade"
+    },
+    {
+      "id": "5",
+      "cityName": "Zagreb"
+    },
+    {
+      "id": "6",
+      "cityName": "Sarajevo"
+    },
+    {
+      "id": "7",
+      "cityName": "Prishtina"
+    },
+    {
+      "id": "8",
+      "cityName": "Rome"
+    },
+    {
+      "id": "9",
+      "cityName": "Paris"
+    },
+    {
+      "id": "10",
+      "cityName": "Madrid"
+    },
+    {
+      "id": "11",
+      "cityName": "Istanbul"
+    },
+    {
+      "id": "12",
+      "cityName": "Moscow"
+    },
+    {
+      "id": "13",
+      "cityName": "Stockholm"
+    }
+  ],
+  "allLocations": [
+    {
+      "id": 5,
+      "name": "Shiko ked",
+      "city": "Belgrade",
+      "longitude": "-157.2201",
+      "latitude": "-57.1480",
+      "address": "927 Ara Flats"
+    },
+    {
+      "id": 7,
+      "name": "Evangeline Bypass",
+      "address": "5672 Raphaelle Forges",
+      "city": "Botsfordmouth",
+      "longitude": "-94.5705",
+      "latitude": "85.5027"
+    },
+    {
+      "id": 8,
+      "name": "test",
+      "city": "Ljubljana",
+      "longitude": "123",
+      "latitude": "123",
+      "address": "test"
+    },
+    {
+      "id": 9,
+      "name": "Shiko kerkesat",
+      "city": "Berlin",
+      "longitude": "123231",
+      "latitude": "123",
+      "address": "address"
+    }
+  ]
+}

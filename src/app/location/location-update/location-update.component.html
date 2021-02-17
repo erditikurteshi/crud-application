@@ -1,0 +1,84 @@
+<div class="main-content">
+    <!-- CONTENT -->
+    <div class="content">
+        <div fxLayout="row" fxLayoutAlign="center" class="form-text">
+            <span>UPDATE LOCATION FORM</span>
+        </div>
+        <form [formGroup]="updateLocationForm" (ngSubmit)="onUpdate()">
+            <div fxLayout="row" fxLayoutAlign="center">
+                <mat-form-field appearance="fill" fxFlex="25">
+                    <mat-label>Name</mat-label>
+                    <mat-icon matSuffix class="secondary-text">text_format</mat-icon>
+                    <input matInput name="name" formControlName="name" />
+                    <mat-error *ngIf="locationFormControls.name.errors?.required">
+                        This field is required
+                    </mat-error>
+                    <mat-error *ngIf="locationFormControls.name.errors?.maxlength">
+                        Maximum characters allowed is 20.
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" fxFlex="25">
+                    <mat-label>City</mat-label>
+                    <mat-icon matSuffix class="secondary-text">location_city</mat-icon>
+                    <mat-select name="city" formControlName="city" required>
+                        <mat-option *ngFor="let city of cities" [value]="city.cityName">
+                            {{ city.cityName }}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="locationFormControls.city.errors?.required">
+                        This field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="center">
+                <mat-form-field appearance="fill" fxFlex="25">
+                    <mat-label>Longitude</mat-label>
+                    <mat-icon matSuffix class="secondary-text">text_format</mat-icon>
+                    <input matInput name="longitude" formControlName="longitude" />
+                    <mat-error *ngIf="locationFormControls.longitude.errors?.required">
+                        This field is required
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" fxFlex="25">
+                    <mat-label>Latitude</mat-label>
+                    <mat-icon matSuffix class="secondary-text">text_format</mat-icon>
+                    <input matInput name="latitude" formControlName="latitude" />
+                    <mat-error *ngIf="locationFormControls.latitude.errors?.required">
+                        This field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="center">
+                <mat-form-field appearance="fill" fxFlex="50">
+                    <mat-label>Address</mat-label>
+                    <mat-icon matSuffix class="secondary-text">home</mat-icon>
+                    <input matInput name="address" formControlName="address" />
+                    <mat-error *ngIf="locationFormControls.address.errors?.required">
+                        This field is required
+                    </mat-error>
+                    <mat-error *ngIf="locationFormControls.address.errors?.maxlength">
+                        Maximum characters allowed is 50.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="center" class="buttons">
+
+                <button mat-raised-button color="private" class="cancel-button" aria-label="SAVE"
+                    routerLink="/location">
+                    CANCEL
+                </button>
+
+                <button mat-raised-button color="primary" class="save-button" aria-label="SAVE"
+                    [disabled]="updateLocationForm.invalid">
+                    UPDATE
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>

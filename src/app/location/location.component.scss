@@ -1,0 +1,29 @@
+#location {
+    mat-card {
+        padding: 25px;
+    }
+
+    .delete-icon {
+        color: rgba(241, 34, 34, 0.815);
+    }
+
+    .update-icon {
+      color: rgb(35, 161, 35);
+    }
+    
+    .example-container {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .mat-table {
+      overflow: auto;
+      max-height: 500px;
+      cursor: pointer;
+    }
+
+    .create-button {
+        text-align: start;
+        margin-bottom: 10px;
+    }
+}
